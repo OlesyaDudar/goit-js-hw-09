@@ -17,9 +17,11 @@ startBtn.addEventListener('click', () => {
   changeBgColor();
   idInterval = setInterval(changeBgColor, 1000);
   startBtn.disabled = true;
+  stopBtn.disabled = false;
 });
 
 stopBtn.addEventListener('click', () => {
   clearInterval(idInterval);
   startBtn.disabled = false;
+  stopBtn.disabled = true;
 });

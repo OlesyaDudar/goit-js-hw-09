@@ -8,13 +8,15 @@ const dayEl = document.querySelector('[data-days]');
 const hourEl = document.querySelector('[data-hours]');
 const minEl = document.querySelector('[data-minutes]');
 const secEl = document.querySelector('[data-seconds]');
-
 const value = document.querySelectorAll('.value');
 const label = document.querySelectorAll('.label');
 const timer = document.querySelector('.timer');
 const field = document.querySelectorAll('.field');
 
 const startBtn = document.querySelector('[data-start]');
+
+let timerId = null;
+
 function initStyle() {
   dateEl.style.fontWeight = '700';
   timer.style.display = 'flex';

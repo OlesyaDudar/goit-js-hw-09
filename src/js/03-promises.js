@@ -15,11 +15,9 @@ function formInput() {
 function formSubmit(event) {
   event.preventDefault();
   let delay = Number(form.delay.value);
-
   for (let i = 0; i < form.amount.value; i = i + 1) {
-    delay = delay + form.step.value * i;
-
     create(i + 1, delay);
+    delay = delay + Number(form.step.value);
   }
 }
 
